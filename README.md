@@ -1,0 +1,1 @@
+# JSONi18n.MASA
