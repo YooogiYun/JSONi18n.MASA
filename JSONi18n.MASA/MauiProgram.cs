@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Maui;
 using JSONi18n.MASA.Helpers;
+using JSONi18n.MASA.Services;
 using JSONi18n.MASA.Shared;
+using JSONi18n.MASA.Shared.IServices;
 
 namespace JSONi18n.MASA;
 
@@ -26,8 +28,16 @@ public static class MauiProgram
         }).AddI18nForMauiBlazor("i18n");
 
 
-        builder.Services.AddSingleton<WeatherForecastService>();
+        builder.AddMyServices();
 
         return builder.Build();
+    }
+
+
+    public static MauiAppBuilder AddMyServices(this MauiAppBuilder builder)
+    {
+        builder.Services.AddSingleton<WeatherForecastService>();
+        builder.Services.AddSingleton<IJsonService , YDataStorageService>();
+        return builder;
     }
 }

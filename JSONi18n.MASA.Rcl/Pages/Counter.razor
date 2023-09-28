@@ -1,4 +1,8 @@
 ﻿@page "/counter"
+@using JSONi18n.MASA.Shared.IServices;
+@using JSONi18n.MASA.Shared.TestData;
+@inject IJsonService JsonService
+
 
 <PageTitle>Counter</PageTitle>
 
@@ -8,11 +12,28 @@
 
 <MButton Color="primary" OnClick="IncrementCount">Click me</MButton>
 
+
+<MCard>
+    <MButton Class="ma-2" Color="primary" Dark OnClick="ParseJson">
+        Parse Json
+        <MIcon Dark Right>
+            mdi-checkox-marked-circle
+        </MIcon>
+    </MButton>
+</MCard>
+
 @code {
     private int currentCount = 0;
 
     private void IncrementCount()
     {
         currentCount++;
+    }
+
+    private void ParseJson( )
+    {
+        var En = JsonData.en_US;
+        JsonService.Parse(En);
+        int a = 2;
     }
 }
