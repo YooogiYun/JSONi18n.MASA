@@ -7,7 +7,7 @@
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
     <ContentPage.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="DarkOrange" StatusBarStyle="LightContent" />
+        <toolkit:StatusBarBehavior StatusBarColor="Transparent" StatusBarStyle="DarkContent" />
     </ContentPage.Behaviors>
 
     <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">

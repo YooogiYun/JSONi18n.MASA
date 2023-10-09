@@ -1,0 +1,41 @@
+﻿<MRow Align="AlignTypes.Center" Class="d-flex flex-md-row" NoGutters>
+    <MAvatar Size="36" Left onclick="@OnAvatarClick">
+        <MImage Src="@AvatarUrl" Alt="Jack"></MImage>
+    </MAvatar>
+    <MCol Class="d-flex flex-column ml-2">
+        <strong class="mb-n1">@AvatarTitle</strong>
+        <MLabel Class="text--secondary subtitle-2">
+            <MBadge Inline Left Dot Color="@BadgeColor">
+                 <MLabel Class="ml-1 caption">
+                    @AvatarSubtitle
+                </MLabel>
+            </MBadge>
+        </MLabel>
+    </MCol>
+    <MSpacer></MSpacer>
+    <MSpacer></MSpacer>
+    <MResponsive MaxWidth="248">
+        <MTextField  
+            Autofocus
+            TValue="string" Dense Flat
+                     HideDetails="true" SoloInverted Rounded
+                     Class="primary hidden-sm-and-down"
+                     PersistentHint
+                     OnClick="OnEditFieldClick"
+                     Hint="Search item">
+             <PrependInnerContent>
+                 <MIcon Class="white--text ml-n3">@EditFieldInnerIcon</MIcon>
+             </PrependInnerContent>
+         </MTextField>
+     </MResponsive>
+     <MButton Right Icon Class="primary ma-1 hidden-md-and-up" Rounded Width="36" Height="36" OnClick="OnEditFieldClick">
+         <MIcon Class="white--text">@EditFieldInnerIcon</MIcon>
+     </MButton>
+     <MButton Right Icon Class="ma-1 warning white--text" Rounded Width="36" Height="36" OnClick="OnRightButtonClick">
+         <MIcon Class="bold">@RightButtonIcon</MIcon>
+     </MButton>
+ </MRow>
+
+ @code {
+
+}

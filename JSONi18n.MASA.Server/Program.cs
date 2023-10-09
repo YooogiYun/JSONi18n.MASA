@@ -1,4 +1,6 @@
+using JSONi18n.MASA.Server.Services;
 using JSONi18n.MASA.Shared;
+using JSONi18n.MASA.Shared.IServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +9,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 //builder.Services.AddMasaBlazor();
 builder.Services.AddMasaBlazor().AddI18nForServer("wwwroot/i18n");
-
+builder.Services.AddSingleton<IPlatformService , YPlatformService>();
 builder.Services.AddSingleton<WeatherForecastService>();
 
 var app = builder.Build();

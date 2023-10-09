@@ -1,53 +1,75 @@
-﻿@inherits LayoutComponentBase
+﻿@using JSONi18n.MASA.Shared.Models;
+
+@* MAUI MASA *@
+
+@inherits LayoutComponentBase
+@inject IPlatformService PlatformService
+
 
 <MApp>
-    <MAppBar App>
-        <MAppBarNavIcon @onclick="() => _drawer = !_drawer"></MAppBarNavIcon>
-        <MToolbarTitle>JSONi18n.MASA</MToolbarTitle>
-        <MSpacer></MSpacer>
-        <MButton Text Color="primary" Target="_blank" Href="https://docs.masastack.com/blazor/introduction/why-masa-blazor">About</MButton>
+    <MAppBar App Dense Elevation="0">
+         <MProgressLinear Active="_loading" Indeterminate="_loading" Absolute Top
+             Class="mb-2"
+             Color="primary warning-2">
+         </MProgressLinear>
+         <AppBarContentComponent AvatarTitle="Hello" AvatarSubtitle="World" OnAvatarClick="Loading"></AppBarContentComponent>
     </MAppBar>
-
-    <MNavigationDrawer App @bind-Value="_drawer">
-        <MList Nav Routable>
-            <MListItem Href="/" ActiveClass="primary--text">
-                <MListItemIcon>
-                    <MIcon>mdi-home</MIcon>
-                </MListItemIcon>
-                <MListItemContent>
-                    <MListItemTitle>Home</MListItemTitle>
-                </MListItemContent>
-            </MListItem>
-            <MListItem Href="/counter" ActiveClass="primary--text">
-                <MListItemIcon>
-                    <MIcon>mdi-plus</MIcon>
-                </MListItemIcon>
-                <MListItemContent>
-                    <MListItemTitle>Counter</MListItemTitle>
-                </MListItemContent>
-            </MListItem>
-            <MListItem Href="/fetchdata" ActiveClass="primary--text">
-                <MListItemIcon>
-                    <MIcon>mdi-list-box</MIcon>
-                </MListItemIcon>
-                <MListItemContent>
-                    <MListItemTitle>Fetch data</MListItemTitle>
-                </MListItemContent>
-            </MListItem>
-        </MList>
-    </MNavigationDrawer>
-
-    <MMain>
+    <MMain Class="grey lighten-3">
         <MContainer Fluid>
             <MErrorHandler>
                 @Body
             </MErrorHandler>
         </MContainer>
     </MMain>
+    <MBottomNavigation App @bind-Value="value" BackgroundColor="@color" Shift>
+        @foreach(var item in BottomNavItems)
+        {
+            <MButton Href="@item.Href">
+                <span class="white--text">@item.Name</span>
+                <MIcon Color="white">@item.Icon</MIcon>
+            </MButton>
+        }
+    </MBottomNavigation>
 </MApp>
 
 @code {
 
     private bool? _drawer;
+    StringNumber value = 1;
+
+    private int _message = 0;
+    private bool _loading = true;
+
+    private void Send( ) => _message++;
+
+    private void Clear( ) => _message = 0;
+
+    private void Loading( ) => _loading = !_loading;
+
+    string color
+    {
+
+        get
+        {
+            var color = "cyan";
+            if(value == 0) color = "cyan";
+            if(value == 1) color = "teal";
+            if(value == 2) color = "brown";
+            if(value == 3) color = "indigo";
+            if(!PlatformService.IsBrower)
+            {
+                PlatformService.ChangeStatusBarColor(System.Drawing.Color.FromName(color).ToArgb());
+            }
+            return color;
+        }
+    }
+
+    List<NavItem> BottomNavItems = new()
+    {
+        new NavItem(){ Name="Home", Href="/", Icon="mdi-home"},
+        new NavItem(){ Name="Counter", Href="/counter", Icon="mdi-phone"},
+        new NavItem(){ Name="Fetch Data", Href="/fetchdata", Icon="mdi-file"},
+        new NavItem(){ Name="Json Edtior", Href="/jsonedtior", Icon="mdi-note"},
+    };
 
 }

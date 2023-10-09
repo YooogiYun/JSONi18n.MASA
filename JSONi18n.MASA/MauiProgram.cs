@@ -30,6 +30,11 @@ public static class MauiProgram
 
         builder.AddMyServices();
 
+#if DEBUG
+        builder.Services.AddBlazorWebViewDeveloperTools();
+        builder.Services.AddLogging();
+#endif
+
         return builder.Build();
     }
 
@@ -37,7 +42,9 @@ public static class MauiProgram
     public static MauiAppBuilder AddMyServices(this MauiAppBuilder builder)
     {
         builder.Services.AddSingleton<WeatherForecastService>();
-        builder.Services.AddSingleton<IJsonService , YDataStorageService>();
+        builder.Services.AddSingleton<IJsonService , YDataHandlerService>();
+        builder.Services.AddSingleton<IPlatformService , YPlatformService>();
         return builder;
     }
+
 }

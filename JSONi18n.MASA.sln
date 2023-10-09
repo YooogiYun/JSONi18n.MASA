@@ -16,26 +16,36 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JSONi18n.MASA.Web", "JSONi1
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Android|Any CPU = Android|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F51EA0C-8286-4EE7-BA59-10931DDDD62A}.Android|Any CPU.ActiveCfg = Android|Any CPU
+		{8F51EA0C-8286-4EE7-BA59-10931DDDD62A}.Android|Any CPU.Build.0 = Android|Any CPU
 		{8F51EA0C-8286-4EE7-BA59-10931DDDD62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8F51EA0C-8286-4EE7-BA59-10931DDDD62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F51EA0C-8286-4EE7-BA59-10931DDDD62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F51EA0C-8286-4EE7-BA59-10931DDDD62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{361DB9DC-156E-4E90-ADDA-B6E5717AB3EA}.Android|Any CPU.ActiveCfg = Release|Any CPU
 		{361DB9DC-156E-4E90-ADDA-B6E5717AB3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{361DB9DC-156E-4E90-ADDA-B6E5717AB3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{361DB9DC-156E-4E90-ADDA-B6E5717AB3EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{361DB9DC-156E-4E90-ADDA-B6E5717AB3EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A06733-4DE1-4081-B582-78C7A6077E05}.Android|Any CPU.ActiveCfg = Release|Any CPU
 		{86A06733-4DE1-4081-B582-78C7A6077E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{86A06733-4DE1-4081-B582-78C7A6077E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86A06733-4DE1-4081-B582-78C7A6077E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86A06733-4DE1-4081-B582-78C7A6077E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13BB3279-D54F-410F-82FF-73AD1406CEB8}.Android|Any CPU.ActiveCfg = Android|Any CPU
+		{13BB3279-D54F-410F-82FF-73AD1406CEB8}.Android|Any CPU.Build.0 = Android|Any CPU
 		{13BB3279-D54F-410F-82FF-73AD1406CEB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{13BB3279-D54F-410F-82FF-73AD1406CEB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13BB3279-D54F-410F-82FF-73AD1406CEB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13BB3279-D54F-410F-82FF-73AD1406CEB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58935B6E-7935-4E30-8DBF-A67BFDE3F683}.Android|Any CPU.ActiveCfg = Android|Any CPU
+		{58935B6E-7935-4E30-8DBF-A67BFDE3F683}.Android|Any CPU.Build.0 = Android|Any CPU
+		{58935B6E-7935-4E30-8DBF-A67BFDE3F683}.Android|Any CPU.Deploy.0 = Android|Any CPU
 		{58935B6E-7935-4E30-8DBF-A67BFDE3F683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58935B6E-7935-4E30-8DBF-A67BFDE3F683}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58935B6E-7935-4E30-8DBF-A67BFDE3F683}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

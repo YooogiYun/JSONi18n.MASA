@@ -1,0 +1,36 @@
+﻿:root {
+    /*Default Theme Color*/
+    --color-primary: #4C4C6D;
+    --color-secondary: #1B9C85;
+    --color-background: #E8F6EF;
+    --color-accent: #E4BB73;
+    --color-orange: #d69739;
+    --color-green: #5ca46f;
+    --color-red: #f43c2f;
+    --color-transparent: transparent;
+    /* 添加其他颜色变量... */
+}
+
+.glb-theme-graytone {
+    --color-primary: #413446;
+    --color-secondary: #8C9DB2;
+    --color-background: #F0F4F6;
+    --color-accent: #f54a3eff;
+    --color-transparent: White;
+}
+
+.glb-theme-colorful {
+    --color-primary: #9376E0;
+    --color-secondary: #E893CF;
+    --color-background: #F3BCC8;
+    --color-accent: #A1EAFB;
+    --color-transparent: var(--color-primary);
+}
+
+.glb-theme-masa {
+    --color-primary: indigo lighten-2;
+    --color-secondary: indigo lighten-3;
+    --color-background: lime darken-2;
+    --color-accent: #A1EAFB;
+    --color-transparent: indigo lighten-2;
+}

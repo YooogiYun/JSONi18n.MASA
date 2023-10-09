@@ -1,5 +1,7 @@
+using JSONi18n.MASA.Client.Services;
 using JSONi18n.MASA.Rcl;
 using JSONi18n.MASA.Shared;
+using JSONi18n.MASA.Shared.IServices;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -8,6 +10,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSingleton<IPlatformService , YPlatformService>();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 //builder.Services.AddMasaBlazor();
