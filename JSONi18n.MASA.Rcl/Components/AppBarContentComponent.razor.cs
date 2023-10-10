@@ -22,19 +22,19 @@ public partial class AppBarContentComponent
     //    base.OnInitialized();
     //}
 
-    //public async Task OnAvatarClickedAsync(ExMouseEventArgs args)
+    //public async Task HandleOnAvatarClickedAsync(ExMouseEventArgs args)
     //{
     //    if(OnAvatarClick.HasDelegate)
     //        await OnAvatarClick.InvokeAsync(args);
     //}
 
-    //public async Task OnShortEditFieldClickedAsync(ExMouseEventArgs args)
+    //public async Task HandleOnShortEditFieldClickedAsync(ExMouseEventArgs args)
     //{
     //    if(OnRightButtonClick.HasDelegate)
     //        await OnEditFieldClick.InvokeAsync(args);
     //}
 
-    //public async Task OnRightButtonClickedAsync(ExMouseEventArgs args)
+    //public async Task HandleOnRightButtonClickedAsync(ExMouseEventArgs args)
     //{
     //    if(OnRightButtonClick.HasDelegate)
     //        await OnRightButtonClick.InvokeAsync(args);
