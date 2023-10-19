@@ -22,7 +22,8 @@ public static class JsonData
           "Home",
           "Products",
           "Services",
-          "Contact"
+          "Contact",
+          "nimenhao"
           ]
         }
         """;
@@ -47,7 +48,8 @@ public static class JsonData
           "主页",
           "产品",
           "服务",
-          "联系我们"
+          "联系我们",
+          "你们好"
           ]
         }
         """;
